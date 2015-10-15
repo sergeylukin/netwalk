@@ -13,8 +13,8 @@ Netwalk = (function() {
     }
     defaults = {
       containerSelector: '#netwalk',
-      rows: null,
-      columns: null,
+      rows: 7,
+      columns: 15,
       size: 40
     };
     this.options = _.extend(defaults, options);
@@ -38,8 +38,8 @@ Netwalk = (function() {
     };
     this.container = $(this.options.containerSelector);
     this.container.html('');
-    this.container.css('max-width', 'none');
-    this.container.css('max-height', 'none');
+    this.container.css('width', '450px');
+    this.container.css('height', '300px');
     if (!(this.options.size != null) && !(this.options.columns != null)) {
       log('at least size or # of columns required');
       return;
